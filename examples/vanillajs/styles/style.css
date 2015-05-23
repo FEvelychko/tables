@@ -1,0 +1,26 @@
+.styleForTable{
+    width: 1200px;
+    height: 300px;
+    border:1px solid gray;
+    background-color: forestgreen;
+}
+
+#buttonStyleFirst{
+    display: block;
+}
+#buttonStyle{
+    display: none;
+}
+
+#buttonSave{
+    display: none;
+}
+
+#buttonAddTable{
+    display: block;
+    margin: 0 auto;
+}
+
+.textTask{
+    text-align: center;
+}

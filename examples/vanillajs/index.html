@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>vanillajs table</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css" />
+
+</head>
+<body style = "background:lightgray">
+<h3 class = "textTask">Dynamic Table</h3>
+<hr/>
+<div id = "buttons">
+    <input type="submit" id = "buttonAddTable" class="btn btn-default btn-lg" value="Add Table" onclick = "addTable()"/>
+</div>
+<br/><br/><table class = "table table-striped">
+    <thead>
+    <tr class='info'><th>Id</th>
+        <th>Name</th>
+        <th>Stock</th>
+        <th>Country</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id = dataInTable>
+    </tbody>
+</table>
+<hr/>
+<script src="scripts/app.js"></script>
+</body>
+</html>
