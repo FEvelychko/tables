@@ -6,92 +6,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css" />
-
 </head>
 <body ng-controller =  "tableController">
-<pre>currentObj{{currentObj}}</pre>
-<pre>rowObject{{rowObject}}</pre>
-<pre>data{{data}}</pre>
-
-
-<h3>Dynamic Table</h3><hr/>
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th ng-repeat = "head in headers">{{head}}</th>
-    </tr>
-    </thead>
-    <tr ng-repeat = "item in data">
-        <td>{{item.id}}</td>
-        <td>{{item.name}}</td>
-        <td>{{item.country}}</td>
-        <td>{{item.product}}</td>
-        <td>{{item.founder}}</td>
-        <td>{{item.stock}}</td>
-        <td>
-            <input type="submit" class = "btn btn-primary btn-sm" value="change" ng-click = "changeData()"/>
-            <input type="submit" class = "btn btn-danger btn-sm" value="delete" ng-click = "deleteData($index)"/>
-        </td>
-    </tr>
-</table>
-
-<div class="form-horizontal">
-    <div class="row">
-        <div class = "col-xs-3">
-            <label>id</label>
-            <input type="text" class="form-control" placeholder="Enter id" ng-model = "currentObj.id">
-        </div>
-        <div class = "col-xs-3">
-            <label>name</label>
-            <input type="text" class="form-control" placeholder="Enter name" ng-model = "currentObj.name">
-        </div>
-        <div class = "col-xs-3">
-            <label>country</label>
-            <input type="text" class="form-control" placeholder="Enter country" ng-model = "currentObj.country">
-        </div>
-    </div>
-    <div class="row">
-        <div class = "col-xs-3">
-            <label>product</label>
-            <input type="text" class="form-control" placeholder="Enter product" ng-model = "currentObj.product">
-        </div>
-        <div class = "col-xs-3">
-            <label>founder</label>
-            <input type="text" class="form-control" placeholder="Enter founder" ng-model = "currentObj.founder">
-        </div>
-        <div class = "col-xs-3">
-            <label>stock</label>
-            <input type="text" class="form-control" placeholder="Enter stock" ng-model = "currentObj.stock">
-        </div>
-    </div>
-    <br/><br/><div class="row">
-        <input type="submit" id = "buttonSaveData" class="btn btn-default btn-lg" value = "Save In Tale" ng-click = "saveData()"/>
-    </div>
-</div>
-<hr/>
-
-    <div class = "row">
-        <input type="submit" id = "buttonAddTable" class="btn btn-default btn-lg" value="Show sample" ng-click = "addTable()"/>
-    </div>
-    <div ng-show = "showTable">
-        <table class="table table-striped">
-            <thead><tr><th ng-repeat = "head in headers">{{head}}</th>
-            </tr></thead>
-            <tr ng-repeat = "item in realData">
-                <td>{{item.id}}</td>
-                <td>{{item.name}}</td>
-                <td>{{item.country}}</td>
-                <td>{{item.product}}</td>
-                <td>{{item.founder}}</td>
-                <td>{{item.stock}}</td>
-                <td>
-                    <input type="submit" class = "btn btn-primary btn-sm" value="change"/>
-                    <input type="submit" class = "btn btn-danger btn-sm" value="delete"/>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-<script src="scripts/controller.js"></script>
+    <h3>Dynamic Table</h3><hr/>
+    <table-directive></table-directive>
+    <script src="scripts/controller.js"></script>
+    <script src="scripts/directive.js"></script>
 </body>
 </html>
